@@ -1,3 +1,6 @@
+// Mae Schweller
+// 210 lab 20
+// 10/9/26
 #include <iostream>
 #include <iomanip>
 
@@ -12,15 +15,15 @@ public:
     // constructors
     Chair() {
         prices = new double[SIZE];
-        legs = 0;
+        legs = (rand() % 2) + 3; //randon number 3-4
         for (int i = 0; i < SIZE; i++)
-            prices[i] = 0;
+            prices[i] = (rand() % 90000) / 100; // random rpice from 100.00 to 999.99
     }
-    Chair(int l) {
+    Chair(int l, double* p) {
         prices = new double[SIZE];
         legs = l;
         for (int i = 0; i < SIZE; i++)
-            prices[i] = 0;
+            prices[i] = p[i];
     }
 
     // setters and getters
